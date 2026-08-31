@@ -1,0 +1,6 @@
+window.APP_CONFIG = {
+  API_URL: "PASTE_URL_APPS_SCRIPT_YANG_BERAKHIR_EXEC_DI_SINI",
+
+  // Note hanya muncul untuk angkatan 2022–2025.
+  CAMPUS_EMAIL_NOTE_YEARS: [2022, 2023, 2024, 2025]
+};
