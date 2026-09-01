@@ -3,207 +3,144 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Form Registrasi Peminatan Bahasa UPT Bahasa 2026">
-  <title>Registrasi Peminatan Bahasa | UPT Bahasa 2026</title>
-  <link rel="stylesheet" href="assets/css/style.css">
+  <meta name="description" content="Pendaftaran peminatan Bahasa Inggris, Jepang, dan Mandarin bersama UKM Bahasa dan Global Language Center UBP Karawang.">
+  <meta name="theme-color" content="#173f92">
+  <title>GLC UBP Karawang | Jelajahi Dunia Lewat Bahasa</title>
+  <link rel="stylesheet" href="assets/css/landing.css">
 </head>
 <body>
-<main class="page-shell">
-    <section class="registration-card">
-      <header class="card-header">
-        <div class="brand-mark">UPT</div>
-        <div class="header-copy">
-          <p class="eyebrow">UPT Bahasa</p>
-          <h1>Registrasi Peminatan Bahasa 2026</h1>
-          <p class="subtitle">
-            Silakan lengkapi data peserta dan pilih satu peminatan bahasa.
-          </p>
+  <a class="skip-link" href="#mainContent">Lewati ke konten utama</a>
 
-          <div class="culture-tags" aria-label="Pilihan bahasa">
-            <span>English</span>
-            <span>日本語</span>
-            <span>中文</span>
-          </div>
+  <header class="site-header">
+    <a class="brand-lockup" href="index.html" aria-label="Beranda UKM Bahasa dan GLC UBP Karawang">
+      <img class="brand-logo brand-logo-ukm" src="assets/images/logo-ukm-bahasa.png" alt="Logo UKM Bahasa UBP Karawang">
+      <span class="brand-divider" aria-hidden="true"></span>
+      <img class="brand-logo brand-logo-glc" src="assets/images/logo-glc-ubp-karawang.png" alt="Logo Global Language Center UBP Karawang">
+    </a>
+
+    <nav class="site-nav" aria-label="Navigasi utama">
+      <a href="#bahasa">Tiga Bahasa</a>
+      <a class="nav-cta" href="registrasi.html">Registrasi</a>
+    </nav>
+  </header>
+
+  <main id="mainContent">
+    <section class="hero" aria-labelledby="heroTitle">
+      <div class="hero-copy reveal is-visible">
+        <p class="eyebrow">
+          <span class="eyebrow-dot" aria-hidden="true"></span>
+          Peminatan Bahasa 2026
+        </p>
+
+        <h1 id="heroTitle">
+          Buka lebih banyak peluang lewat <span>bahasa.</span>
+        </h1>
+
+        <p class="hero-description">
+          Mulai langkahmu bersama UKM Bahasa dan Global Language Center UBP Karawang.
+          Pilih Bahasa Inggris, Jepang, atau Mandarin yang paling sesuai dengan tujuanmu.
+        </p>
+
+        <div class="hero-actions">
+          <a class="button button-primary" href="registrasi.html">
+            Daftar Sekarang
+            <span aria-hidden="true">→</span>
+          </a>
+          <a class="button button-secondary" href="#bahasa">Kenali 3 Bahasa</a>
         </div>
-      </header>
 
-      <div class="hero-banner" aria-hidden="true">
-        <div class="hero-pill hero-pill-blue">International</div>
-        <div class="hero-pill hero-pill-red">Japanese</div>
-        <div class="hero-pill hero-pill-gold">Mandarin</div>
+        <div class="language-line" aria-label="Bahasa yang tersedia">
+          <span><b>EN</b> English</span>
+          <span><b>日</b> 日本語</span>
+          <span><b>中</b> 中文</span>
+        </div>
       </div>
 
-      <form id="registrationForm" novalidate>
-        <div class="form-grid">
-          <div class="form-group full">
-            <label for="nama">Nama Lengkap <span class="required">*</span></label>
-            <input
-              type="text"
-              id="nama"
-              name="nama"
-              autocomplete="name"
-              placeholder="Masukkan nama lengkap"
-              required
-            >
-            <small class="error-text" data-error-for="nama"></small>
-          </div>
-
-          <div class="form-group">
-            <label for="nim">NIM <span class="optional">(opsional)</span></label>
-            <input
-              type="text"
-              id="nim"
-              name="nim"
-              inputmode="numeric"
-              autocomplete="off"
-              placeholder="Masukkan NIM"
-            >
-            <small class="error-text" data-error-for="nim"></small>
-          </div>
-
-          <div class="form-group">
-            <label for="prodi">Program Studi <span class="required">*</span></label>
-            <select id="prodi" name="prodi" required>
-              <option value="" selected disabled>Pilih Program Studi</option>
-              <option value="Teknik Informatika">Teknik Informatika</option>
-              <option value="Sistem Informasi">Sistem Informasi</option>
-              <option value="Ilmu Hukum">Ilmu Hukum</option>
-              <option value="Teknik Industri">Teknik Industri</option>
-              <option value="Teknik Mesin">Teknik Mesin</option>
-              <option value="Manajemen">Manajemen</option>
-              <option value="Akuntansi">Akuntansi</option>
-              <option value="Pendidikan Guru Sekolah Dasar">Pendidikan Guru Sekolah Dasar</option>
-              <option value="Pendidikan Pancasila dan Kewarganegaraan">Pendidikan Pancasila dan Kewarganegaraan</option>
-              <option value="Pendidikan Agama Islam">Pendidikan Agama Islam</option>
-              <option value="Psikologi">Psikologi</option>
-              <option value="Farmasi">Farmasi</option>
-            </select>
-            <small class="error-text" data-error-for="prodi"></small>
-          </div>
-
-          <div class="form-group">
-            <label for="angkatan">Angkatan <span class="required">*</span></label>
-            <select id="angkatan" name="angkatan" required>
-              <option value="" selected disabled>Pilih Angkatan</option>
-              <option value="2022">2022</option>
-              <option value="2023">2023</option>
-              <option value="2024">2024</option>
-              <option value="2025">2025</option>
-              <option value="2026">2026</option>
-            </select>
-            <small class="error-text" data-error-for="angkatan"></small>
-          </div>
-
-          <div class="form-group">
-            <label for="telepon">Nomor Telepon / WhatsApp <span class="required">*</span></label>
-            <input
-              type="tel"
-              id="telepon"
-              name="telepon"
-              autocomplete="tel"
-              placeholder="Contoh: 081234567890"
-              required
-            >
-            <small class="error-text" data-error-for="telepon"></small>
-          </div>
-
-          <div class="form-group full">
-            <label for="email">Email <span class="required">*</span></label>
-            <input
-              type="email"
-              id="email"
-              name="email"
-              autocomplete="email"
-              placeholder="nama@email.com"
-              required
-            >
-            <div id="campusEmailNote" class="campus-note" hidden>
-              Untuk peserta angkatan 2022–2025, mohon menggunakan email kampus apabila tersedia. Ketentuan ini tidak memblokir registrasi.
-            </div>
-            <small class="error-text" data-error-for="email"></small>
-          </div>
-
-          <fieldset class="form-group full language-fieldset">
-            <legend>Peminatan Bahasa <span class="required">*</span></legend>
-            <p class="helper-text">Pilih satu peminatan.</p>
-
-            <div class="language-options">
-              <label class="language-option">
-                <input type="radio" name="peminatan" value="Bahasa Inggris">
-                <span>
-                  <strong>Bahasa Inggris</strong>
-                  <small>English Language</small>
-                </span>
-              </label>
-
-              <label class="language-option">
-                <input type="radio" name="peminatan" value="Bahasa Jepang">
-                <span>
-                  <strong>Bahasa Jepang</strong>
-                  <small>日本語 / Japanese</small>
-                </span>
-              </label>
-
-              <label class="language-option">
-                <input type="radio" name="peminatan" value="Bahasa Mandarin">
-                <span>
-                  <strong>Bahasa Mandarin</strong>
-                  <small>中文 / Mandarin</small>
-                </span>
-              </label>
-            </div>
-
-            <small class="error-text" data-error-for="peminatan"></small>
-          </fieldset>
+      <div class="mascot-column reveal is-visible" aria-label="Mitsuka, maskot UKM Bahasa">
+        <div class="speech-card" aria-live="polite">
+          <span class="speech-kicker">Mitsuka says,</span>
+          <strong id="mascotGreeting">Hello! Ready to begin?</strong>
         </div>
 
-        <div id="formMessage" class="form-message" role="status" aria-live="polite"></div>
-
-        <button type="submit" id="submitButton" class="primary-button">
-          Daftar Sekarang
-        </button>
-      </form>
+        <div class="mascot-stage">
+          <div class="mascot-halo" aria-hidden="true"></div>
+          <span class="floating-word floating-word-en" aria-hidden="true">Hello!</span>
+          <span class="floating-word floating-word-jp" aria-hidden="true">こんにちは!</span>
+          <span class="floating-word floating-word-cn" aria-hidden="true">你好!</span>
+          <img class="mascot-image" src="assets/images/mitsuka-wave.png" alt="Mitsuka melambaikan tangan">
+          <div class="mascot-name">
+            <span>Meet our mascot</span>
+            <strong>Mitsuka</strong>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <footer class="page-footer">
-      <p>UPT Bahasa • Registrasi 2026</p>
-    </footer>
+    <div class="scroll-hint" aria-hidden="true">
+      <span></span>
+      Jelajahi pilihan bahasa
+    </div>
+
+    <section class="language-section" id="bahasa" aria-labelledby="languageTitle">
+      <div class="section-heading reveal">
+        <p class="section-kicker">Satu langkah, tiga pilihan</p>
+        <h2 id="languageTitle">Bahasa mana yang ingin kamu jelajahi?</h2>
+        <p>Setiap bahasa membuka pengalaman, budaya, dan peluang yang berbeda.</p>
+      </div>
+
+      <div class="language-grid">
+        <article class="language-card card-english reveal">
+          <div class="language-icon" aria-hidden="true">EN</div>
+          <p class="card-label">English</p>
+          <h3>Bahasa Inggris</h3>
+          <p>Perkuat komunikasi global untuk akademik, karier, dan koneksi internasional.</p>
+          <span class="card-script">Hello, world!</span>
+        </article>
+
+        <article class="language-card card-japanese reveal">
+          <div class="language-icon" aria-hidden="true">日</div>
+          <p class="card-label">Japanese</p>
+          <h3>Bahasa Jepang</h3>
+          <p>Pelajari bahasa sekaligus memahami budaya dan cara berkomunikasi masyarakat Jepang.</p>
+          <span class="card-script" lang="ja">はじめまして!</span>
+        </article>
+
+        <article class="language-card card-mandarin reveal">
+          <div class="language-icon" aria-hidden="true">中</div>
+          <p class="card-label">Mandarin</p>
+          <h3>Bahasa Mandarin</h3>
+          <p>Bangun kemampuan bahasa yang relevan untuk relasi, bisnis, dan wawasan lintas budaya.</p>
+          <span class="card-script" lang="zh">你好，朋友!</span>
+        </article>
+      </div>
+    </section>
+
+    <section class="cta-panel reveal" aria-labelledby="ctaTitle">
+      <div class="cta-copy">
+        <p class="section-kicker">Siap memulai?</p>
+        <h2 id="ctaTitle">Pilih bahasamu dan mulai perjalanan baru.</h2>
+        <p>Isi formulir registrasi, tentukan satu peminatan, lalu tunggu informasi berikutnya.</p>
+      </div>
+
+      <div class="cta-mascot" aria-hidden="true">
+        <img src="assets/images/mitsuka-blue-cheer.png" alt="">
+      </div>
+
+      <a class="button button-light" href="registrasi.html">
+        Registrasi Sekarang
+        <span aria-hidden="true">→</span>
+      </a>
+    </section>
   </main>
 
-  <div id="successModal" class="modal-backdrop" hidden>
-    <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="successTitle">
-      <div class="success-icon">✓</div>
-      <h2 id="successTitle">Registrasi Berhasil</h2>
-      <p>
-        Data registrasi Anda telah berhasil disimpan. Simpan ID registrasi berikut apabila diperlukan.
-      </p>
-
-      <dl class="summary-list">
-        <div>
-          <dt>ID Registrasi</dt>
-          <dd id="summaryRegistrationId">-</dd>
-        </div>
-        <div>
-          <dt>Nama</dt>
-          <dd id="summaryNama">-</dd>
-        </div>
-        <div>
-          <dt>Angkatan</dt>
-          <dd id="summaryAngkatan">-</dd>
-        </div>
-        <div>
-          <dt>Peminatan</dt>
-          <dd id="summaryPeminatan">-</dd>
-        </div>
-      </dl>
-
-      <button type="button" id="closeModalButton" class="secondary-button">Tutup</button>
+  <footer class="site-footer">
+    <div class="footer-brand">
+      <img src="assets/images/logo-ukm-bahasa.png" alt="" aria-hidden="true">
+      <p><strong>UKM Bahasa × GLC UBP Karawang</strong><br>Registrasi Peminatan Bahasa 2026</p>
     </div>
-  </div>
+    <p>English • 日本語 • 中文</p>
+  </footer>
 
-  <script src="assets/js/config.js"></script>
-  <script src="assets/js/validation.js"></script>
-  <script src="assets/js/api.js"></script>
-  <script src="assets/js/main.js"></script>
+  <script src="assets/js/landing.js"></script>
 </body>
 </html>
