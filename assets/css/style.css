@@ -73,6 +73,11 @@ body {
   object-fit: contain;
 }
 
+.registration-logo-ubp {
+  height: 56px;
+  max-width: 78px;
+}
+
 .registration-logo-ukm {
   height: 60px;
 }
@@ -677,6 +682,11 @@ select option {
     height: 32px;
   }
 
+  .registration-logo-ubp {
+    height: 43px;
+    max-width: 60px;
+  }
+
   .registration-logo-ukm {
     height: 47px;
   }
@@ -791,8 +801,18 @@ select option {
     display: none;
   }
 
+  .registration-logo-ubp {
+    height: 37px;
+    max-width: 52px;
+  }
+
+  .registration-logo-ukm {
+    height: 43px;
+  }
+
   .registration-logo-glc {
-    max-width: 96px;
+    height: 33px;
+    max-width: 92px;
   }
 
   /* ========================================================
@@ -839,6 +859,26 @@ select option {
 
   .card-header .header-copy {
     padding-right: 0;
+  }
+}
+
+@media (max-width: 360px) {
+  .registration-logo-group {
+    gap: 5px;
+  }
+
+  .registration-logo-ubp {
+    height: 33px;
+    max-width: 46px;
+  }
+
+  .registration-logo-ukm {
+    height: 39px;
+  }
+
+  .registration-logo-glc {
+    height: 30px;
+    max-width: 84px;
   }
 }
 
