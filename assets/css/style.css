@@ -36,6 +36,79 @@ body {
     url("../images/background-upt-bahasa-cultural.png") center top / cover no-repeat fixed;
 }
 
+.registration-topbar {
+  position: relative;
+  z-index: 2;
+  width: min(100% - 32px, 920px);
+  min-height: 92px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.registration-logo-group {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  border-radius: 14px;
+}
+
+.registration-logo-group:focus-visible,
+.home-link:focus-visible {
+  outline: 3px solid rgba(36, 71, 168, 0.22);
+  outline-offset: 4px;
+}
+
+.registration-logo-group > span {
+  width: 1px;
+  height: 42px;
+  background: rgba(22, 32, 51, 0.16);
+}
+
+.registration-logo-group img {
+  display: block;
+  width: auto;
+  object-fit: contain;
+}
+
+.registration-logo-ukm {
+  height: 60px;
+}
+
+.registration-logo-glc {
+  height: 51px;
+  max-width: 180px;
+}
+
+.home-link {
+  min-height: 42px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0 16px;
+  border: 1px solid rgba(36, 71, 168, 0.14);
+  border-radius: 999px;
+  color: var(--primary);
+  background: rgba(255, 255, 255, 0.75);
+  font-size: 13px;
+  font-weight: 800;
+  text-decoration: none;
+  box-shadow: 0 8px 20px rgba(16, 24, 40, 0.06);
+  backdrop-filter: blur(8px);
+  transition: transform 0.18s ease, background 0.18s ease;
+}
+
+.home-link:hover {
+  background: white;
+  transform: translateY(-1px);
+}
+
+.registration-topbar + .page-shell {
+  padding-top: 20px;
+}
+
 .bg-decor,
 .bg-grid {
   position: fixed;
@@ -131,10 +204,75 @@ body {
 .card-header {
   display: flex;
   gap: 18px;
-  align-items: flex-start;
+  align-items: center;
   padding-bottom: 24px;
   margin-bottom: 20px;
   border-bottom: 1px solid var(--border);
+}
+
+/* ==========================================================
+   MASKOT HALAMAN REGISTRASI — DESKTOP / LAPTOP
+   File gambar: assets/images/mitsuka-greeting.png
+
+   --reg-mascot-x: negatif ke kiri, positif ke kanan
+   --reg-mascot-y: negatif ke atas, positif ke bawah
+   ========================================================== */
+.registration-mascot {
+  --reg-mascot-x: 0px;
+  --reg-mascot-y: 0px;
+  position: relative;
+  flex: 0 0 150px;
+  align-self: stretch;
+  min-height: 164px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  transform: translate(var(--reg-mascot-x), var(--reg-mascot-y));
+}
+
+/* LINGKARAN BELAKANG MASKOT — ubah width dan height. */
+.registration-mascot::before {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 142px;
+  height: 142px;
+  border-radius: 50%;
+  background: linear-gradient(145deg, rgba(36, 71, 168, 0.09), rgba(29, 140, 143, 0.07));
+}
+
+/* UKURAN GAMBAR MASKOT — ubah width dan max-height. */
+.registration-mascot img {
+  position: relative;
+  z-index: 1;
+  width: 118px;
+  max-height: 156px;
+  object-fit: contain;
+  object-position: center bottom;
+  filter: drop-shadow(0 10px 10px rgba(22, 32, 51, 0.15));
+  animation: registrationMascotFloat 3.8s ease-in-out infinite;
+}
+
+/* BALON TEKS MASKOT — ubah top dan right untuk posisinya. */
+.registration-mascot span {
+  position: absolute;
+  top: -4px;
+  right: 0;
+  z-index: 2;
+  padding: 7px 10px;
+  border: 1px solid rgba(36, 71, 168, 0.12);
+  border-radius: 12px 12px 3px 12px;
+  color: var(--primary);
+  background: rgba(255, 255, 255, 0.93);
+  font-size: 10px;
+  font-weight: 800;
+  box-shadow: 0 8px 18px rgba(16, 24, 40, 0.08);
+}
+
+@keyframes registrationMascotFloat {
+  0%, 100% { transform: translateY(0) rotate(-0.4deg); }
+  50% { transform: translateY(-6px) rotate(0.6deg); }
 }
 
 .brand-mark {
@@ -525,9 +663,42 @@ select option {
 }
 
 @media (max-width: 720px) {
+  .registration-topbar {
+    width: min(100% - 20px, 920px);
+    min-height: 76px;
+    gap: 12px;
+  }
+
+  .registration-logo-group {
+    gap: 7px;
+  }
+
+  .registration-logo-group > span {
+    height: 32px;
+  }
+
+  .registration-logo-ukm {
+    height: 47px;
+  }
+
+  .registration-logo-glc {
+    height: 36px;
+    max-width: 112px;
+  }
+
+  .home-link {
+    min-height: 38px;
+    padding: 0 12px;
+    font-size: 0;
+  }
+
+  .home-link span {
+    font-size: 20px;
+  }
+
   .page-shell {
     width: min(100% - 20px, 920px);
-    padding-top: 20px;
+    padding-top: 10px;
   }
 
   .registration-card {
@@ -536,7 +707,48 @@ select option {
   }
 
   .card-header {
-    flex-direction: column;
+    position: relative;
+    display: block;
+    padding-right: 0;
+  }
+
+  /* ========================================================
+     MASKOT REGISTRASI — TABLET / MOBILE (431px–720px)
+     right makin besar  = geser ke kiri
+     bottom makin besar = geser ke atas
+     ======================================================== */
+  .registration-mascot {
+    --reg-mascot-x: 0px;
+    --reg-mascot-y: 0px;
+    position: absolute;
+    right: -4px;
+    bottom: 4px;
+    width: 96px;
+    min-height: 122px;
+    pointer-events: none;
+    opacity: 1;
+  }
+
+  .registration-mascot::before {
+    width: 94px;
+    height: 94px;
+  }
+
+  .registration-mascot img {
+    width: 78px;
+    max-height: 114px;
+  }
+
+  .registration-mascot span {
+    display: none;
+  }
+
+  .card-header .header-copy {
+    padding-right: 104px;
+  }
+
+  .culture-tags {
+    padding-right: 0;
   }
 
   .form-grid {
@@ -571,6 +783,72 @@ select option {
   .bg-mandarin {
     right: -40px;
     bottom: 40px;
+  }
+}
+
+@media (max-width: 430px) {
+  .registration-logo-group > span {
+    display: none;
+  }
+
+  .registration-logo-glc {
+    max-width: 96px;
+  }
+
+  /* ========================================================
+     MASKOT REGISTRASI — HP KECIL (maksimal 430px)
+     Maskot menjadi baris sendiri agar tidak menutupi judul.
+
+     --reg-mascot-x: negatif ke kiri, positif ke kanan
+     --reg-mascot-y: negatif ke atas, positif ke bawah
+     ======================================================== */
+  .registration-mascot {
+    --reg-mascot-x: 0px;
+    --reg-mascot-y: 0px;
+    position: relative;
+    right: auto;
+    bottom: auto;
+    width: 100%;
+    min-height: 112px;
+    display: flex;
+    align-self: auto;
+    align-items: flex-end;
+    justify-content: flex-end;
+    margin-top: 8px;
+    opacity: 1;
+  }
+
+  .registration-mascot::before {
+    right: 0;
+    bottom: 0;
+    width: 106px;
+    height: 106px;
+  }
+
+  .registration-mascot img {
+    width: 88px;
+    max-height: 110px;
+  }
+
+  .registration-mascot span {
+    top: 24px;
+    right: 104px;
+    display: block;
+    white-space: nowrap;
+  }
+
+  .card-header .header-copy {
+    padding-right: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
   }
 }
 
