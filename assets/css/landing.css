@@ -88,6 +88,11 @@ img {
   object-fit: contain;
 }
 
+.brand-logo-ubp {
+  height: 54px;
+  max-width: 78px;
+}
+
 .brand-logo-ukm {
   height: 62px;
 }
@@ -851,6 +856,11 @@ h1 span::after {
     gap: 8px;
   }
 
+  .brand-logo-ubp {
+    height: 42px;
+    max-width: 60px;
+  }
+
   .brand-logo-ukm {
     height: 46px;
   }
@@ -1082,6 +1092,11 @@ h1 span::after {
     gap: 8px;
   }
 
+  .brand-logo-ubp {
+    height: 36px;
+    max-width: 51px;
+  }
+
   .brand-logo-ukm {
     height: 41px;
   }
@@ -1262,6 +1277,11 @@ h1 span::after {
   /* Pengaman tambahan untuk layar 320–360px. */
   .brand-lockup {
     gap: 6px;
+  }
+
+  .brand-logo-ubp {
+    height: 32px;
+    max-width: 45px;
   }
 
   .brand-logo-ukm {
