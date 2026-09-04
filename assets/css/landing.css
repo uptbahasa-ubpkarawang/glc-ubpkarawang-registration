@@ -88,11 +88,6 @@ img {
   object-fit: contain;
 }
 
-.brand-logo-ubp {
-  height: 54px;
-  max-width: 78px;
-}
-
 .brand-logo-ukm {
   height: 62px;
 }
@@ -836,9 +831,29 @@ h1 span::after {
      Semua penyesuaian di blok ini tidak mengubah desktop.
      ========================================================= */
   body {
+    position: relative;
+    background: #f7faff;
+  }
+
+  /*
+   * Background portrait khusus mobile.
+   * Dibuat sebagai layer fixed supaya ukuran `cover` mengikuti layar,
+   * bukan tinggi seluruh halaman yang dapat membuat gambar terpotong habis.
+   */
+  body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
     background:
-      linear-gradient(rgba(247, 250, 255, 0.83), rgba(255, 250, 245, 0.79)),
-      url("../images/background-upt-bahasa-cultural.png") center top / cover;
+      linear-gradient(
+        180deg,
+        rgba(247, 250, 255, 0.16),
+        rgba(255, 250, 245, 0.12)
+      ),
+      url("../images/background-upt-bahasa-cultural-mobile.png") center top / cover no-repeat;
+    transform: translateZ(0);
   }
 
   .site-header,
@@ -854,11 +869,6 @@ h1 span::after {
 
   .brand-lockup {
     gap: 8px;
-  }
-
-  .brand-logo-ubp {
-    height: 42px;
-    max-width: 60px;
   }
 
   .brand-logo-ukm {
@@ -1092,11 +1102,6 @@ h1 span::after {
     gap: 8px;
   }
 
-  .brand-logo-ubp {
-    height: 36px;
-    max-width: 51px;
-  }
-
   .brand-logo-ukm {
     height: 41px;
   }
@@ -1277,11 +1282,6 @@ h1 span::after {
   /* Pengaman tambahan untuk layar 320–360px. */
   .brand-lockup {
     gap: 6px;
-  }
-
-  .brand-logo-ubp {
-    height: 32px;
-    max-width: 45px;
   }
 
   .brand-logo-ukm {
