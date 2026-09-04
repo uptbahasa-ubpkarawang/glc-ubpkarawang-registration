@@ -841,6 +841,7 @@ h1 span::after {
   body {
     position: relative;
     background: #f7faff;
+    overscroll-behavior-y: none;
   }
 
   /*
@@ -851,14 +852,17 @@ h1 span::after {
   body::before {
     content: "";
     position: fixed;
-    inset: 0;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    height: 100lvh;
     z-index: 0;
     pointer-events: none;
     background:
       url("../images/background-upt-bahasa-cultural-mobile-v2.webp") center / 100% 100% no-repeat;
     opacity: 0.42;
     filter: saturate(0.94) contrast(0.98);
-    transform: translateZ(0);
   }
 
   .site-header,
