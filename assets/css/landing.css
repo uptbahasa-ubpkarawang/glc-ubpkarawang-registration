@@ -86,6 +86,14 @@ img {
 .brand-logo {
   width: auto;
   object-fit: contain;
+  flex: 0 0 auto;
+}
+
+.brand-logo-ubp,
+.brand-logo-campus,
+.brand-lockup img[src$="/logo-ubp-karawang.png"] {
+  height: 62px;
+  max-width: 92px;
 }
 
 .brand-logo-ukm {
@@ -847,11 +855,9 @@ h1 span::after {
     z-index: 0;
     pointer-events: none;
     background:
-      radial-gradient(circle at 8% 32%, rgba(31, 86, 182, 0.1), transparent 27%),
-      radial-gradient(circle at 92% 42%, rgba(201, 60, 76, 0.08), transparent 25%),
       url("../images/background-upt-bahasa-cultural-mobile-v2.webp") center / 100% 100% no-repeat;
-    opacity: 0.78;
-    filter: saturate(1.08) contrast(1.03);
+    opacity: 0.42;
+    filter: saturate(0.94) contrast(0.98);
     transform: translateZ(0);
   }
 
@@ -868,6 +874,14 @@ h1 span::after {
 
   .brand-lockup {
     gap: 8px;
+    min-width: 0;
+  }
+
+  .brand-logo-ubp,
+  .brand-logo-campus,
+  .brand-lockup img[src$="/logo-ubp-karawang.png"] {
+    height: 46px;
+    max-width: 68px;
   }
 
   .brand-logo-ukm {
@@ -1101,13 +1115,24 @@ h1 span::after {
     gap: 8px;
   }
 
+  .brand-lockup {
+    gap: 6px;
+  }
+
+  .brand-logo-ubp,
+  .brand-logo-campus,
+  .brand-lockup img[src$="/logo-ubp-karawang.png"] {
+    height: 40px;
+    max-width: 60px;
+  }
+
   .brand-logo-ukm {
-    height: 41px;
+    height: 38px;
   }
 
   .brand-logo-glc {
-    height: 32px;
-    max-width: 94px;
+    height: 30px;
+    max-width: 82px;
   }
 
   .brand-divider {
@@ -1280,16 +1305,23 @@ h1 span::after {
 @media (max-width: 360px) {
   /* Pengaman tambahan untuk layar 320–360px. */
   .brand-lockup {
-    gap: 6px;
+    gap: 4px;
+  }
+
+  .brand-logo-ubp,
+  .brand-logo-campus,
+  .brand-lockup img[src$="/logo-ubp-karawang.png"] {
+    height: 35px;
+    max-width: 53px;
   }
 
   .brand-logo-ukm {
-    height: 37px;
+    height: 34px;
   }
 
   .brand-logo-glc {
-    height: 29px;
-    max-width: 84px;
+    height: 27px;
+    max-width: 74px;
   }
 
   .site-nav .nav-cta {
