@@ -672,10 +672,17 @@ select option {
     width: min(100% - 20px, 920px);
     min-height: 76px;
     gap: 12px;
+    padding-block: 7px;
   }
 
   .registration-logo-group {
     gap: 7px;
+    min-width: 0;
+    flex-shrink: 1;
+  }
+
+  .registration-logo-group img {
+    flex: 0 0 auto;
   }
 
   .registration-logo-group > span {
@@ -708,7 +715,7 @@ select option {
 
   .page-shell {
     width: min(100% - 20px, 920px);
-    padding-top: 10px;
+    padding: 10px 0 max(26px, env(safe-area-inset-bottom));
   }
 
   .registration-card {
@@ -720,6 +727,8 @@ select option {
     position: relative;
     display: block;
     padding-right: 0;
+    padding-bottom: 20px;
+    margin-bottom: 18px;
   }
 
   /* ========================================================
@@ -763,6 +772,7 @@ select option {
 
   .form-grid {
     grid-template-columns: 1fr;
+    gap: 18px;
   }
 
   .form-group.full {
@@ -771,6 +781,24 @@ select option {
 
   .language-options {
     grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  input[type="text"],
+  input[type="number"],
+  input[type="tel"],
+  input[type="email"],
+  select {
+    min-height: 50px;
+    font-size: 16px;
+  }
+
+  .language-option {
+    min-height: 74px;
+  }
+
+  .primary-button {
+    min-height: 52px;
   }
 
   .bg-japan,
@@ -797,6 +825,16 @@ select option {
 }
 
 @media (max-width: 430px) {
+  .registration-topbar {
+    width: min(100% - 16px, 920px);
+    min-height: 68px;
+    gap: 7px;
+  }
+
+  .registration-logo-group {
+    gap: 5px;
+  }
+
   .registration-logo-group > span {
     display: none;
   }
@@ -811,8 +849,132 @@ select option {
   }
 
   .registration-logo-glc {
-    height: 33px;
-    max-width: 92px;
+    height: 30px;
+    max-width: 82px;
+  }
+
+  .home-link {
+    min-width: 38px;
+    min-height: 38px;
+    justify-content: center;
+    padding: 0;
+  }
+
+  .page-shell {
+    width: min(100% - 16px, 920px);
+    padding-top: 8px;
+  }
+
+  .registration-card {
+    padding: 20px 15px 18px;
+    border-radius: 17px;
+  }
+
+  .registration-card::before {
+    height: 6px;
+  }
+
+  .eyebrow {
+    margin-bottom: 6px;
+    font-size: 10px;
+    line-height: 1.45;
+    letter-spacing: 0.09em;
+  }
+
+  h1 {
+    font-size: clamp(24px, 7.5vw, 30px);
+    line-height: 1.18;
+  }
+
+  .subtitle {
+    margin-top: 8px;
+    font-size: 14px;
+    line-height: 1.55;
+  }
+
+  .culture-tags {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 6px;
+    margin-top: 12px;
+  }
+
+  .culture-tags span {
+    min-height: 31px;
+    justify-content: center;
+    padding: 0 6px;
+    font-size: 12px;
+  }
+
+  .hero-banner {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 6px;
+    padding-bottom: 18px;
+  }
+
+  .hero-pill {
+    min-width: 0;
+    min-height: 34px;
+    justify-content: center;
+    padding: 0 5px;
+    font-size: 10px;
+    letter-spacing: 0.025em;
+  }
+
+  .form-grid {
+    gap: 16px;
+  }
+
+  .form-group {
+    gap: 7px;
+  }
+
+  label,
+  legend {
+    font-size: 14px;
+  }
+
+  input[type="text"],
+  input[type="number"],
+  input[type="tel"],
+  input[type="email"],
+  select {
+    padding-inline: 12px;
+    border-radius: 11px;
+  }
+
+  .language-option {
+    min-height: 70px;
+    padding: 12px;
+  }
+
+  .campus-note {
+    padding: 9px 10px;
+    font-size: 13px;
+  }
+
+  .modal-backdrop {
+    padding: 14px;
+  }
+
+  .modal-card {
+    padding: 23px 18px;
+    border-radius: 18px;
+  }
+
+  .summary-list > div {
+    gap: 12px;
+  }
+
+  .summary-list dd {
+    max-width: 62%;
+    overflow-wrap: anywhere;
+  }
+
+  .page-footer {
+    padding-top: 14px;
+    font-size: 12px;
   }
 
   /* ========================================================
@@ -829,7 +991,7 @@ select option {
     right: auto;
     bottom: auto;
     width: 100%;
-    min-height: 112px;
+    min-height: 100px;
     display: flex;
     align-self: auto;
     align-items: flex-end;
@@ -841,18 +1003,18 @@ select option {
   .registration-mascot::before {
     right: 0;
     bottom: 0;
-    width: 106px;
-    height: 106px;
+    width: 94px;
+    height: 94px;
   }
 
   .registration-mascot img {
-    width: 88px;
-    max-height: 110px;
+    width: 79px;
+    max-height: 98px;
   }
 
   .registration-mascot span {
-    top: 24px;
-    right: 104px;
+    top: 20px;
+    right: 92px;
     display: block;
     white-space: nowrap;
   }
@@ -868,17 +1030,21 @@ select option {
   }
 
   .registration-logo-ubp {
-    height: 33px;
-    max-width: 46px;
+    height: 31px;
+    max-width: 43px;
   }
 
   .registration-logo-ukm {
-    height: 39px;
+    height: 36px;
   }
 
   .registration-logo-glc {
-    height: 30px;
-    max-width: 84px;
+    height: 27px;
+    max-width: 73px;
+  }
+
+  .hero-pill {
+    font-size: 9px;
   }
 }
 
@@ -893,7 +1059,7 @@ select option {
 }
 
 
-/* Background v5: ilustrasi budaya sebagai layer utama. */
+/* Ilustrasi lama disembunyikan karena background sekarang memakai aset gambar. */
 .bg-decor,
 .bg-grid {
   display: none !important;
@@ -901,8 +1067,30 @@ select option {
 
 @media (max-width: 720px) {
   body {
+    background: #eef3f8;
+    overscroll-behavior-y: none;
+  }
+
+  /*
+   * Background portrait khusus registrasi.
+   * 100lvh menjaga ukurannya stabil saat address bar HP muncul atau menghilang.
+   */
+  body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    height: 100lvh;
+    z-index: 0;
+    pointer-events: none;
     background:
-      linear-gradient(rgba(247, 249, 252, 0.80), rgba(237, 241, 246, 0.84)),
-      url("../images/background-upt-bahasa-cultural.png") center top / cover no-repeat;
+      url("../images/background-registrasi-mobile.webp") center / 100% 100% no-repeat;
+    opacity: 0.44;
+  }
+
+  .registration-card {
+    background: rgba(255, 255, 255, 0.94);
   }
 }
