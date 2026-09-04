@@ -225,6 +225,18 @@ body {
 .registration-mascot {
   --reg-mascot-x: 0px;
   --reg-mascot-y: 0px;
+
+  /* ========================================================
+     SETTING MANUAL POSISI GAMBAR MITSUKA DI DALAM LINGKARAN
+
+     --reg-image-x: negatif = geser kiri, positif = geser kanan
+     --reg-image-y: negatif = geser atas, positif = geser bawah
+
+     Contoh: --reg-image-x: -10px; berarti geser 10px ke kiri.
+     Variabel ini hanya menggeser gambar, bukan lingkaran/balon.
+     ======================================================== */
+  --reg-image-x: 0px;
+  --reg-image-y: 0px;
   position: relative;
   flex: 0 0 150px;
   align-self: stretch;
@@ -276,8 +288,15 @@ body {
 }
 
 @keyframes registrationMascotFloat {
-  0%, 100% { transform: translateY(0) rotate(-0.4deg); }
-  50% { transform: translateY(-6px) rotate(0.6deg); }
+  0%, 100% {
+    transform: translate(var(--reg-image-x), var(--reg-image-y)) rotate(-0.4deg);
+  }
+  50% {
+    transform: translate(
+      var(--reg-image-x),
+      calc(var(--reg-image-y) - 6px)
+    ) rotate(0.6deg);
+  }
 }
 
 .brand-mark {
@@ -987,6 +1006,13 @@ select option {
   .registration-mascot {
     --reg-mascot-x: 0px;
     --reg-mascot-y: 0px;
+
+    /*
+     * POSISI MITSUKA KHUSUS HP:
+     * Ubah dua angka ini kalau mau mengatur posisinya lagi.
+     */
+    --reg-image-x: -8px;
+    --reg-image-y: 0px;
     position: relative;
     right: auto;
     bottom: auto;
