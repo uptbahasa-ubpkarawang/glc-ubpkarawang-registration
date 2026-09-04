@@ -236,7 +236,7 @@ body {
      Variabel ini hanya menggeser gambar, bukan lingkaran/balon.
      ======================================================== */
   --reg-image-x: 0px;
-  --reg-image-y: 0px;
+  --reg-image-y: -5px;
   position: relative;
   flex: 0 0 150px;
   align-self: stretch;
@@ -1011,7 +1011,7 @@ select option {
      * POSISI MITSUKA KHUSUS HP:
      * Ubah dua angka ini kalau mau mengatur posisinya lagi.
      */
-    --reg-image-x: -8px;
+    --reg-image-x: -16px;
     --reg-image-y: 0px;
     position: relative;
     right: auto;
