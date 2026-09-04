@@ -837,8 +837,8 @@ h1 span::after {
 
   /*
    * Background portrait khusus mobile.
-   * Dibuat sebagai layer fixed supaya ukuran `cover` mengikuti layar,
-   * bukan tinggi seluruh halaman yang dapat membuat gambar terpotong habis.
+   * Layer mengikuti viewport dan memakai 100% x 100% supaya ilustrasi
+   * di sisi kiri/kanan tidak terpotong pada layar HP yang tinggi.
    */
   body::before {
     content: "";
@@ -847,12 +847,11 @@ h1 span::after {
     z-index: 0;
     pointer-events: none;
     background:
-      linear-gradient(
-        180deg,
-        rgba(247, 250, 255, 0.16),
-        rgba(255, 250, 245, 0.12)
-      ),
-      url("../images/background-upt-bahasa-cultural-mobile.png") center top / cover no-repeat;
+      radial-gradient(circle at 8% 32%, rgba(31, 86, 182, 0.1), transparent 27%),
+      radial-gradient(circle at 92% 42%, rgba(201, 60, 76, 0.08), transparent 25%),
+      url("../images/background-upt-bahasa-cultural-mobile-v2.webp") center / 100% 100% no-repeat;
+    opacity: 0.78;
+    filter: saturate(1.08) contrast(1.03);
     transform: translateZ(0);
   }
 
