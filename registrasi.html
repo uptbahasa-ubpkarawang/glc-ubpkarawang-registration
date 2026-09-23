@@ -3,31 +3,63 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Form Registrasi Peminatan Bahasa UKM Bahasa dan Global Language Center UBP Karawang 2026">
+
+  <meta
+    name="description"
+    content="Form Registrasi Peminatan Bahasa Global Language Center UBP Karawang 2026"
+  >
+
   <meta name="theme-color" content="#173f92">
-  <title>Registrasi Peminatan Bahasa | GLC UBP Karawang 2026</title>
+
+  <title>
+    Registrasi Peminatan Bahasa | GLC UBP Karawang 2026
+  </title>
+
   <link rel="stylesheet" href="assets/css/style.css?v=5">
 </head>
 <body>
   <header class="registration-topbar">
-    <a class="registration-logo-group" href="index.html" aria-label="Kembali ke halaman utama UBP Karawang">
-      <img class="registration-logo-ubp" src="assets/images/logo-ubp-karawang.png" alt="Logo Universitas Buana Perjuangan Karawang">
+    <a
+      class="registration-logo-group"
+      href="index.html"
+      aria-label="Kembali ke halaman utama UBP Karawang"
+    >
+      <img
+        class="registration-logo-ubp"
+        src="assets/images/logo-ubp-karawang.png"
+        alt="Logo Universitas Buana Perjuangan Karawang"
+      >
+
       <span aria-hidden="true"></span>
-      <img class="registration-logo-ukm" src="assets/images/logo-ukm-bahasa.png" alt="Logo UKM Bahasa UBP Karawang">
-      <span aria-hidden="true"></span>
-      <img class="registration-logo-glc" src="assets/images/logo-glc-ubp-karawang.png" alt="Logo Global Language Center UBP Karawang">
+
+      <img
+        class="registration-logo-glc"
+        src="assets/images/logo-glc-ubp-karawang.png"
+        alt="Logo Global Language Center UBP Karawang"
+      >
     </a>
+
     <a class="home-link" href="index.html">Kembali</a>
   </header>
 
   <main class="page-shell">
-    <section class="registration-card" aria-labelledby="registrationTitle">
+    <section
+      class="registration-card"
+      aria-labelledby="registrationTitle"
+    >
       <header class="card-header">
         <div class="header-copy">
-          <p class="eyebrow">UKM Bahasa × GLC UBP Karawang</p>
-          <h1 id="registrationTitle">Registrasi Peminatan Bahasa 2026</h1>
+          <p class="eyebrow">
+            Global Language Center UBP Karawang
+          </p>
+
+          <h1 id="registrationTitle">
+            Registrasi Peminatan Bahasa 2026
+          </h1>
+
           <p class="subtitle">
-            Lengkapi data diri dan pilih satu bahasa yang ingin kamu pelajari bersama kami.
+            Lengkapi data diri dan pilih satu bahasa yang
+            ingin kamu pelajari bersama kami.
           </p>
 
           <div class="culture-tags" aria-label="Pilihan bahasa">
@@ -39,20 +71,36 @@
 
         <div class="registration-mascot" aria-hidden="true">
           <span>Yuk, isi datanya!</span>
-          <img src="assets/images/mitsuka-greeting.png" alt="">
+
+          <img
+            src="assets/images/mitsuka-greeting.png"
+            alt=""
+          >
         </div>
       </header>
 
       <div class="hero-banner" aria-hidden="true">
-        <div class="hero-pill hero-pill-blue">International</div>
-        <div class="hero-pill hero-pill-red">Japanese</div>
-        <div class="hero-pill hero-pill-gold">Mandarin</div>
+        <div class="hero-pill hero-pill-blue">
+          International
+        </div>
+
+        <div class="hero-pill hero-pill-red">
+          Japanese
+        </div>
+
+        <div class="hero-pill hero-pill-gold">
+          Mandarin
+        </div>
       </div>
 
       <form id="registrationForm" novalidate>
         <div class="form-grid">
           <div class="form-group full">
-            <label for="nama">Nama Lengkap <span class="required">*</span></label>
+            <label for="nama">
+              Nama Lengkap
+              <span class="required">*</span>
+            </label>
+
             <input
               type="text"
               id="nama"
@@ -61,11 +109,19 @@
               placeholder="Masukkan nama lengkap"
               required
             >
-            <small class="error-text" data-error-for="nama"></small>
+
+            <small
+              class="error-text"
+              data-error-for="nama"
+            ></small>
           </div>
 
           <div class="form-group">
-            <label for="nim">NIM <span class="optional">(opsional)</span></label>
+            <label for="nim">
+              NIM
+              <span class="optional">(opsional)</span>
+            </label>
+
             <input
               type="text"
               id="nim"
@@ -74,44 +130,109 @@
               autocomplete="off"
               placeholder="Masukkan NIM"
             >
-            <small class="error-text" data-error-for="nim"></small>
+
+            <small
+              class="error-text"
+              data-error-for="nim"
+            ></small>
           </div>
 
           <div class="form-group">
-            <label for="prodi">Program Studi <span class="required">*</span></label>
+            <label for="prodi">
+              Program Studi
+              <span class="required">*</span>
+            </label>
+
             <select id="prodi" name="prodi" required>
-              <option value="" selected disabled>Pilih Program Studi</option>
-              <option value="Teknik Informatika">Teknik Informatika</option>
-              <option value="Sistem Informasi">Sistem Informasi</option>
-              <option value="Ilmu Hukum">Ilmu Hukum</option>
-              <option value="Teknik Industri">Teknik Industri</option>
-              <option value="Teknik Mesin">Teknik Mesin</option>
-              <option value="Manajemen">Manajemen</option>
-              <option value="Akuntansi">Akuntansi</option>
-              <option value="Pendidikan Guru Sekolah Dasar">Pendidikan Guru Sekolah Dasar</option>
-              <option value="Pendidikan Pancasila dan Kewarganegaraan">Pendidikan Pancasila dan Kewarganegaraan</option>
-              <option value="Pendidikan Agama Islam">Pendidikan Agama Islam</option>
-              <option value="Psikologi">Psikologi</option>
-              <option value="Farmasi">Farmasi</option>
+              <option value="" selected disabled>
+                Pilih Program Studi
+              </option>
+
+              <option value="Teknik Informatika">
+                Teknik Informatika
+              </option>
+
+              <option value="Sistem Informasi">
+                Sistem Informasi
+              </option>
+
+              <option value="Ilmu Hukum">
+                Ilmu Hukum
+              </option>
+
+              <option value="Teknik Industri">
+                Teknik Industri
+              </option>
+
+              <option value="Teknik Mesin">
+                Teknik Mesin
+              </option>
+
+              <option value="Manajemen">
+                Manajemen
+              </option>
+
+              <option value="Akuntansi">
+                Akuntansi
+              </option>
+
+              <option value="Pendidikan Guru Sekolah Dasar">
+                Pendidikan Guru Sekolah Dasar
+              </option>
+
+              <option value="Pendidikan Pancasila dan Kewarganegaraan">
+                Pendidikan Pancasila dan Kewarganegaraan
+              </option>
+
+              <option value="Pendidikan Agama Islam">
+                Pendidikan Agama Islam
+              </option>
+
+              <option value="Psikologi">
+                Psikologi
+              </option>
+
+              <option value="Farmasi">
+                Farmasi
+              </option>
             </select>
-            <small class="error-text" data-error-for="prodi"></small>
+
+            <small
+              class="error-text"
+              data-error-for="prodi"
+            ></small>
           </div>
 
           <div class="form-group">
-            <label for="angkatan">Angkatan <span class="required">*</span></label>
+            <label for="angkatan">
+              Angkatan
+              <span class="required">*</span>
+            </label>
+
             <select id="angkatan" name="angkatan" required>
-              <option value="" selected disabled>Pilih Angkatan</option>
+              <option value="" selected disabled>
+                Pilih Angkatan
+              </option>
+
               <option value="2022">2022</option>
               <option value="2023">2023</option>
               <option value="2024">2024</option>
               <option value="2025">2025</option>
               <option value="2026">2026</option>
             </select>
-            <small class="error-text" data-error-for="angkatan"></small>
+
+            <small
+              class="error-text"
+              data-error-for="angkatan"
+            ></small>
           </div>
 
           <div class="form-group">
-            <label for="telepon">Nomor Telepon / WhatsApp <span class="required">*</span></label>
+            <label for="telepon">
+              Nomor Telepon / WhatsApp
+              <span class="required">*</span>
+            </label>
+
             <input
               type="tel"
               id="telepon"
@@ -120,11 +241,19 @@
               placeholder="Contoh: 081234567890"
               required
             >
-            <small class="error-text" data-error-for="telepon"></small>
+
+            <small
+              class="error-text"
+              data-error-for="telepon"
+            ></small>
           </div>
 
           <div class="form-group full">
-            <label for="email">Email <span class="required">*</span></label>
+            <label for="email">
+              Email
+              <span class="required">*</span>
+            </label>
+
             <input
               type="email"
               id="email"
@@ -133,19 +262,41 @@
               placeholder="nama@email.com"
               required
             >
-            <div id="campusEmailNote" class="campus-note" hidden>
-              Untuk peserta angkatan 2022–2025, mohon menggunakan email kampus apabila tersedia. Ketentuan ini tidak memblokir registrasi.
+
+            <div
+              id="campusEmailNote"
+              class="campus-note"
+              hidden
+            >
+              Untuk peserta angkatan 2022–2025, mohon menggunakan
+              email kampus apabila tersedia. Ketentuan ini tidak
+              memblokir registrasi.
             </div>
-            <small class="error-text" data-error-for="email"></small>
+
+            <small
+              class="error-text"
+              data-error-for="email"
+            ></small>
           </div>
 
           <fieldset class="form-group full language-fieldset">
-            <legend>Peminatan Bahasa <span class="required">*</span></legend>
-            <p class="helper-text">Pilih satu peminatan.</p>
+            <legend>
+              Peminatan Bahasa
+              <span class="required">*</span>
+            </legend>
+
+            <p class="helper-text">
+              Pilih satu peminatan.
+            </p>
 
             <div class="language-options">
               <label class="language-option">
-                <input type="radio" name="peminatan" value="Bahasa Inggris">
+                <input
+                  type="radio"
+                  name="peminatan"
+                  value="Bahasa Inggris"
+                >
+
                 <span>
                   <strong>Bahasa Inggris</strong>
                   <small>English Language</small>
@@ -153,7 +304,12 @@
               </label>
 
               <label class="language-option">
-                <input type="radio" name="peminatan" value="Bahasa Jepang">
+                <input
+                  type="radio"
+                  name="peminatan"
+                  value="Bahasa Jepang"
+                >
+
                 <span>
                   <strong>Bahasa Jepang</strong>
                   <small>日本語 / Japanese</small>
@@ -161,7 +317,12 @@
               </label>
 
               <label class="language-option">
-                <input type="radio" name="peminatan" value="Bahasa Mandarin">
+                <input
+                  type="radio"
+                  name="peminatan"
+                  value="Bahasa Mandarin"
+                >
+
                 <span>
                   <strong>Bahasa Mandarin</strong>
                   <small>中文 / Mandarin</small>
@@ -169,29 +330,51 @@
               </label>
             </div>
 
-            <small class="error-text" data-error-for="peminatan"></small>
+            <small
+              class="error-text"
+              data-error-for="peminatan"
+            ></small>
           </fieldset>
         </div>
 
-        <div id="formMessage" class="form-message" role="status" aria-live="polite"></div>
+        <div
+          id="formMessage"
+          class="form-message"
+          role="status"
+          aria-live="polite"
+        ></div>
 
-        <button type="submit" id="submitButton" class="primary-button">
+        <button
+          type="submit"
+          id="submitButton"
+          class="primary-button"
+        >
           Daftar Sekarang
         </button>
       </form>
     </section>
 
     <footer class="page-footer">
-      <p>UKM Bahasa × GLC UBP Karawang</p>
+      <p>Global Language Center UBP Karawang</p>
     </footer>
   </main>
 
   <div id="successModal" class="modal-backdrop" hidden>
-    <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="successTitle">
+    <div
+      class="modal-card"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="successTitle"
+    >
       <div class="success-icon">✓</div>
-      <h2 id="successTitle">Registrasi Berhasil</h2>
+
+      <h2 id="successTitle">
+        Registrasi Berhasil
+      </h2>
+
       <p>
-        Data registrasi Anda telah berhasil disimpan. Simpan ID registrasi berikut apabila diperlukan.
+        Data registrasi Anda telah berhasil disimpan.
+        Simpan ID registrasi berikut apabila diperlukan.
       </p>
 
       <dl class="summary-list">
@@ -199,21 +382,30 @@
           <dt>ID Registrasi</dt>
           <dd id="summaryRegistrationId">-</dd>
         </div>
+
         <div>
           <dt>Nama</dt>
           <dd id="summaryNama">-</dd>
         </div>
+
         <div>
           <dt>Angkatan</dt>
           <dd id="summaryAngkatan">-</dd>
         </div>
+
         <div>
           <dt>Peminatan</dt>
           <dd id="summaryPeminatan">-</dd>
         </div>
       </dl>
 
-      <button type="button" id="closeModalButton" class="secondary-button">Tutup</button>
+      <button
+        type="button"
+        id="closeModalButton"
+        class="secondary-button"
+      >
+        Tutup
+      </button>
     </div>
   </div>
 
